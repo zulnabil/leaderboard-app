@@ -5,4 +5,11 @@ describe('RandomPointsPipe', () => {
     const pipe = new RandomPointsPipe();
     expect(pipe).toBeTruthy();
   });
+
+  it('should return a random number', () => {
+    const pipe = new RandomPointsPipe();
+    const result = pipe.transform(1);
+    expect(result).toBeGreaterThanOrEqual(0);
+    expect(result).toBeLessThanOrEqual(1000);
+  });
 });
