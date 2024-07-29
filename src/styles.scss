@@ -3,4 +3,7 @@
 body {
   background: $bg-gradient;
   min-height: 100svh;
+  margin: 0;
+  font-family: $primary-font;
+  color: $primary-color;
 }

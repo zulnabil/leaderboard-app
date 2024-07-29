@@ -10,3 +10,9 @@ $bg-gradient: linear-gradient(
   $background-secondary-color 10%,
   $background-color 50%
 );
+
+// Define fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+$primary-font: "Roboto", sans-serif;
+$secondary-font: "Arial", sans-serif;
