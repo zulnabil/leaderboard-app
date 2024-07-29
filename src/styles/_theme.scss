@@ -1,0 +1,12 @@
+// Define theme colors
+$primary-color: #ffffff;
+$secondary-color: #6c757d;
+$background-color: #1d1f2a;
+$background-secondary-color: #574d48;
+
+// Define gradient colors
+$bg-gradient: linear-gradient(
+  to bottom,
+  $background-secondary-color 10%,
+  $background-color 50%
+);
