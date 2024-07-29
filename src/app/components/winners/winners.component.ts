@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AvatarUrlPipe } from '@app/pipes/avatar-url.pipe';
 import { RandomPointsPipe } from '@app/pipes/random-points.pipe';
 import { UserService } from '@app/services/user.service';
+import { User } from '@app/types/feature';
 
 @Component({
   selector: 'app-winners',
@@ -11,7 +12,7 @@ import { UserService } from '@app/services/user.service';
   styleUrl: './winners.component.scss',
 })
 export class WinnersComponent implements OnInit {
-  winners: any;
+  winners: User[] = [];
 
   constructor(private userService: UserService) {}
 

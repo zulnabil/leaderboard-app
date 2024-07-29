@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { User } from '@app/types/feature';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,11 +11,11 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  getList(): Observable<any> {
-    return this.http.get(this.baseUrl);
+  getList(): Observable<User[]> {
+    return this.http.get<User[]>(this.baseUrl);
   }
 
-  getDetail(id: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${id}`);
+  getDetail(id: string): Observable<User> {
+    return this.http.get<User>(`${this.baseUrl}/${id}`);
   }
 }
