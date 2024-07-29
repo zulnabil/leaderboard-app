@@ -1,3 +1,4 @@
+@defer (when detail?.name) {
 <div class="container-user-details">
   <div class="user-details">
     <div class="user-details__header">
@@ -36,3 +37,9 @@
     </div>
   </div>
 </div>
+
+} @placeholder {
+<p>Loading...</p>
+} @error {
+<p>Failed to load user details</p>
+}
