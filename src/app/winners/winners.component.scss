@@ -1,0 +1,60 @@
+.container-winner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.winner {
+  &__avatar {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: auto;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+  }
+
+  &__name {
+    font-size: 1rem;
+    color: white;
+    margin: 0.5rem auto;
+    text-align: center;
+  }
+
+  // style winner points with badge
+  &__pts {
+    background-color: #4e4f57;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  &:nth-child(1) &__box {
+    height: 115px;
+    font-size: 3.75rem;
+  }
+
+  &:nth-child(3) &__box {
+    height: 90px;
+    font-size: 3rem;
+  }
+
+  &__box {
+    margin-top: 0.75rem;
+    width: 100px;
+    height: 150px;
+    background-color: #4e4f57;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+  }
+}
