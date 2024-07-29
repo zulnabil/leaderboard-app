@@ -15,7 +15,7 @@ export class UserService {
     return this.http.get<User[]>(this.baseUrl);
   }
 
-  getDetail(id: string): Observable<User> {
-    return this.http.get<User>(`${this.baseUrl}/${id}`);
+  getDetail(id: number | string): Observable<User> {
+    return this.http.get<User>(`${this.baseUrl}/${id.toString()}`);
   }
 }

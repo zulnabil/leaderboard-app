@@ -5,5 +5,13 @@ body {
   min-height: 100svh;
   margin: 0;
   font-family: $primary-font;
-  color: $primary-color;
+  color: white;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  color: #4e4f57;
+  background-color: #4e4f57;
+  margin: 0.5rem 0;
 }

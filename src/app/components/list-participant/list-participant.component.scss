@@ -1,7 +1,7 @@
 @import "styles";
 
 .container-participant {
-  background: #343640;
+  background: $primary-color;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-shadow: 0 0 3rem 0 $background-color;
@@ -40,12 +40,4 @@
   &__pts {
     font-size: smaller;
   }
-}
-
-.divider {
-  border: none;
-  height: 1px;
-  color: #4e4f57;
-  background-color: #4e4f57;
-  margin: 0.5rem 0;
 }

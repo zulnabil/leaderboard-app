@@ -1,6 +1,6 @@
 <div class="container-winner">
-  @for (winner of winners; track winner.id; let idx = $index) {
-  <div class="winner">
+  @for (winner of winners; track winner.id) {
+  <div class="winner" (click)="handleSelectUser(winner.id)">
     <div class="winner__avatar">
       <img
         height="60"
@@ -11,7 +11,14 @@
     </div>
     <p class="winner__name">{{ winner.name }}</p>
     <div class="winner__pts">🟢 {{ winner.id | randomPoints }}</div>
-    <div class="winner__box">{{ winner.id }}</div>
+    <div class="winner__box">{{ winner.index }}</div>
   </div>
   }
 </div>
+
+@if (isDetailWinnerOpen) {
+
+<app-modal (closeModal)="handleCloseDetail()">
+  <app-user-details [id]="selectedWinner" />
+</app-modal>
+}

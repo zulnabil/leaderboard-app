@@ -5,7 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true,
 })
 export class AvatarUrlPipe implements PipeTransform {
-  transform(value: string): string {
-    return `https://api.dicebear.com/9.x/micah/svg?seed=${value}`;
+  transform(value?: string | number): string {
+    if (!value)
+      return `https://api.dicebear.com/9.x/micah/svg?seed=${Math.random()}`;
+    return `https://api.dicebear.com/9.x/micah/svg?seed=${value.toString()}`;
   }
 }
