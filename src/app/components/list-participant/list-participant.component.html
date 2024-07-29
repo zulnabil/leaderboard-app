@@ -1,6 +1,6 @@
 <div class="container-participant">
   @for (participant of participants; track participant.id; let idx = $index) {
-  <div class="participant">
+  <div class="participant" (click)="handleSelectUser(participant.id)">
     <p class="number">{{ participant.id }}</p>
     <div class="participant__profile">
       <div class="participant__avatar">
@@ -24,3 +24,9 @@
   <hr class="divider" />
   } }
 </div>
+
+@if (isDetailParticipantOpen) {
+<app-modal (closeModal)="handleCloseDetail()">
+  <app-user-details [id]="selectedParticipant" />
+</app-modal>
+}

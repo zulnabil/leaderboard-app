@@ -6,6 +6,14 @@
 }
 
 .winner {
+  padding-top: 0.5rem;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
   &__avatar {
     background-color: white;
     border: 1px solid white;
