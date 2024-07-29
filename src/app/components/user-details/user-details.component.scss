@@ -1,0 +1,64 @@
+@import "styles";
+
+.container-user-details {
+  padding: 1rem;
+}
+
+.user-details {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      padding: 0.5rem 1rem;
+      background-color: rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 120px;
+    }
+  }
+
+  &__avatar {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__bio {
+    margin: 0 0 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+  }
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin: 0.5rem 0;
+  }
+}
+
+.text-bold {
+  font-weight: bold;
+}

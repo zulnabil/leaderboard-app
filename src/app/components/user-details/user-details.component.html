@@ -1,0 +1,38 @@
+<div class="container-user-details">
+  <div class="user-details">
+    <div class="user-details__header">
+      <div class="user-details__avatar">
+        <img
+          height="100"
+          width="100"
+          [src]="detail?.name | avatarUrl"
+          alt="user-{{ id }}"
+        />
+      </div>
+      <span>🏛️ {{ detail?.company?.name }}</span>
+    </div>
+    <p class="user-details__name">{{ detail?.name }}</p>
+    <p class="user-details__bio">
+      {{ detail?.address?.street }}, {{ detail?.address?.city }}
+    </p>
+
+    <hr class="divider" />
+
+    <div class="flex-between">
+      <p class="text-bold">Phone Number</p>
+      <p>📞 {{ detail?.phone }}</p>
+    </div>
+    <div class="flex-between">
+      <p class="text-bold">Email</p>
+      <p>✉️ {{ detail?.email?.toLowerCase() }}</p>
+    </div>
+    <div class="flex-between">
+      <p class="text-bold">Website</p>
+      <p>🌐 {{ detail?.website }}</p>
+    </div>
+    <div class="flex-between">
+      <p class="text-bold">Company</p>
+      <p>🏛️ {{ detail?.company?.name }}</p>
+    </div>
+  </div>
+</div>
